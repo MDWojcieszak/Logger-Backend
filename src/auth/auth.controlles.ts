@@ -7,11 +7,11 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { AuthService } from 'src/auth/auth.service';
-import { AuthDto, RegisterDto, ResetPasswordDto } from './dto';
+import { AuthDto, ResetPasswordDto } from './dto';
 import { Tokens } from './types';
 import { GetCurrentUser, Public } from '../common/decorators';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
-import { RptGuard, RtGuard, UrtGuard } from '../common/guards';
+import { RtGuard } from '../common/guards';
 
 @Controller('auth')
 @ApiTags('Auth')
